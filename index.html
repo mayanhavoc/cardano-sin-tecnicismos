@@ -104,21 +104,23 @@
     <section id="contacto">
         <main class="container p-4">
             <h2 class="display-2 fw-bold">Contáctanos</h2>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Juan">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div>
-                <input class="btn btn-primary" type="submit" value="Submit">
-            </div>
+            <form name="contact" netlify>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Juan">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" type="text" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+            </form>
         </main>
     </section>
     <footer class="vw-100 p-4">
