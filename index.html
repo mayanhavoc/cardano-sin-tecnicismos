@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
     <title>Cardano Sin Tecnicismos</title>
 </head>
 <body>
-    <section class="vh-100">
+    <section>
         <section id="navbar">
             <nav class="navbar navbar-expand-lg bg-light vw-100">
                 <div class="container-fluid">
@@ -31,7 +32,7 @@
                 </div>
               </nav>
         </section>
-        <section id="hero" class="container h-100 d-flex flex-column align-items-center justify-content-center">
+        <section id="hero" class="container vh-100 d-flex flex-column align-items-center justify-content-center hidden">
             <h1 class="display-1 text-center fw-bold">Aprende a usar Cardano jugando</h1>
             <div class="container d-flex justify-content-center">
                 <a class="btn btn-primary" href="https://canvas.instructure.com/enroll/MG9EFA" target="_blank" role="button">Regístrate</a>
@@ -41,13 +42,13 @@
 
     <!-- Anuncios -->
 
-    <section id="anuncios">
-        <div class="container p-4 h-100">
+    <section id="anuncios" class="hidden">
+        <div class="container p-4 logos">
             <h2 class="display-2 fw-bold mt-3 mb-5">Esta semana en Cardano Sin Tecnicismos</h2>
             <div class="d-flex justify-content-center align-items-center">
                 <img src="/images/promo-taller5.png" alt="Taller No.5 de Cardano Sin Tecnicismos" class="img-fluid rounded" width="800">
             </div>
-            <div class="container d-flex flex-column justify-content-center align-items-start p-4">
+            <div class="container d-flex flex-column justify-content-center align-items-start p-4 logo hidden">
                 <h2>🚨 Anuncios 🚨</h2>
                 <p>🎉 ¡Esta semana enviamos nuestro NFT de participación! 🎉</p>
                 <p>¿No te ha llegado el tuyo? Llena<span class="fw-bold"><a href="https://forms.gle/NgGCjKh2QDpFnGfb6"> este formulario</a></span> con tu dirección de pre-producción y regístrate en la plataforma y te la haremos llegar a tu billetera.
@@ -59,14 +60,14 @@
                     <img src="/images/taller4-YT-thumbnail.png" alt="NFT de participación" class="img-fluid rounded" width="350">
                 </a>
             </div>
-            <div class="container d-flex flex-column justify-content-center align-items-start p-4">
+            <div class="container d-flex flex-column justify-content-center align-items-start p-4 logo hidden">
                 <h2>📆 Tema de la Semana</h2>
                 <h3 class="mt-2">SPOs, mercados de NFTs y más Eternl</h3>
                 <p>Esta semana profundizamos en el tema de los operadores de Stake pools, específicamente como cambiar nuestro stake de un Stake Pool a otro con la billetera Eternl.</p>
                 <p>Vamos a explorar diferentes mercados de NFTs como<span class="fw-bold"><a href="http://jpg.store/"> jpg.store</a></span>.
                 </p>
             </div>
-            <div class="container d-flex flex-column justify-content-center align-items-start p-4">
+            <div class="container d-flex flex-column justify-content-center align-items-start p-4 logo hidden">
                 <h2>📰 Noticias de Cardano</h2>
                 <p><span class="fw-bold"><a href="🌜#Midnight">🌜#Midnight</a></span>, un blockchain enfocado en preservar privacidad y al mismo tiempo permitir acceso a reguladores y auditores. </p>
                 <img src="/images/anuncio-midnight.png" alt="Cardano anuncia el lanzamiento de un un blockchain enfocado en la privacidad" class="img-fluid rounded" width="400">
@@ -76,14 +77,14 @@
                 <p class="mt-4">🪙 💵 Emurgo, el brazo comercial de Cardano anunció el lanzamiento de un stablecoin atado al dólar de Estados Unidos a inicios de 2023. - <a href="https://apple.news/A_DxyaxZZMBSQeVnxIMpVyA">https://apple.news/A_DxyaxZZMBSQeVnxIMpVyA</a></p>
                 <img src="/images/emurgo-stablecoin.png" alt="Emurgo anuncia lanzamiento de stablecoin" class="img-fluid rounded" width="400">
             </div>
-            <div class="container d-flex flex-column justify-content-center align-items-start p-4">
+            <div class="container d-flex flex-column justify-content-center align-items-start p-4 logo hidden">
                 <h2>🪛 Recursos</h2>
                 <ul class="d-flex flex-column space-between">
                     <li class="my-2">[Tutorial Completo] 👝 Eternl aka. CCVault Light Wallet Cardano 👝 <a href="https://youtu.be/lqHggZ3SRAQ" target="_blank"><img src="images/yt_logo_rgb_light.png" class="px-1" width="75"></a> - de <a href="https://twitter.com/ChileStakepo">CHIL Stake Pool - @ChileStakepo</a> e <a href="https://twitter.com/indi_gital">Individuo Digital - @indi_gital</a></li>
                     <li class="my-2">Import seed phrase into Eternl wallet and delegate/stake - #4 Cardano for non-technical people <a href="https://www.youtube.com/watch?v=4Iut0eaQTNg&t=0s" target="_blank"><img src="images/yt_logo_rgb_light.png" class="px-1" width="75"></a></li>
                 </ul>
             </div>
-            <div class="container d-flex flex-column justify-content-center-align-items-start">
+            <div class="container d-flex flex-column justify-content-center-align-items-start logo hidden">
                 <h2>Información importante y canales de comunicación</h2>
                 <ul>
                     <li>
@@ -115,7 +116,7 @@
 
     <!-- ACERCA DE -->
 
-    <section class="h-100" id="acerca-de">
+    <section class="h-100 hidden" id="acerca-de">
         <main class="container p-4">
             <h2 class="display-2 fw-bold">Acerca de la iniciativa</h2>
             <p>
@@ -145,8 +146,8 @@
             <p>Yo aprendí a programar completamente en línea y completamente <span class="fw-bold">gratis</span> gracias a la iniciativa de <a href="https://twitter.com/leonnoel">Leon Noel</a> llamada <a href="https://leonnoel.com/100devs/">100 Devs</a>.</p>
             <p>Ahora yo quiero compartir lo que he aprendido del ecosistema Web3 de Cardano con otros que como yo, están emocionados con la promesa que esta tecnología ofrece al futuro en general, y a latinoamerica en particular.</p>
             <h2 class="mt-4 display-2 fw-bold">Colaboradores</h2>
-            <div class="row row-cols-2 row-cols-md-4 cols-lg-4 g-4">
-                <div class="col">
+            <div class="row row-cols-2 row-cols-md-4 cols-lg-4 g-4 logos">
+                <div class="col hidden logo">
                     <div class="card">
                         <img src="images/LatinoStakePool_logo.png" alt="Latino Staking Pool" class="card-img-top">
                         <div class="card-body">
@@ -172,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col hidden logo">
                     <div class="card">
                         <img src="images/Individuo-digital_logo.png" alt="Individuo Digital" class="card-img-top p-4">
                         <div class="card-body">
@@ -193,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col hidden logo">
                     <div class="card">
                         <img src="images/CHIL-stake-pool.png" alt="CHIL - Stake Pool" class="card-img-top">
                         <div class="card-body">
@@ -216,7 +217,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col hidden logo">
                     <div class="card">
                         <img src="images/cardano-translator-logo.jpeg" alt="Cardano Translator Team" class="card-img-top">
                         <div class="card-body">
@@ -237,7 +238,7 @@
 
     <!-- PROGRAMA -->
 
-    <section id="programa" class="h-100">
+    <section id="programa" class="h-100 hidden">
         <div class="container p-4">
             <h2 class="display-2 fw-bold">¿En qué consiste el programa?</h2>
             <p>
@@ -264,7 +265,7 @@
 
     <!-- CONTACTO -->
 
-    <section id="contacto" class="h-100">
+    <section id="contacto" class="h-100 hidden">
         <main class="container p-4">
             <h2 class="display-2 fw-bold">Contáctanos</h2>
             <form name="contact" netlify>
@@ -289,26 +290,38 @@
 
     <!-- Footer -->
 
-    <footer class="container p-4">
-        <div class="d-flex align-items-center overflow-scroll justify-lg">
-            <a href="https://canvas.instructure.com/enroll/MG9EFA" target="_blank">
-                <img class="mx-3" src="images/cardanoST-brand-for-white-background.png" class="px-1" width="150">
-            </a>
-            <a href="https://twitter.com/cardano_st" target="_blank">
-                <img class="mx-3" src="images/2021-Twitter-logo-blue.png" class="px-1" width="50">
-            </a>
-            <a href="https://linktr.ee/cardanosintecnicismos" target="_blank">
-                <img class="mx-3" src="images/linktree-logo-lg.png" class="px-1" width="50">
-            </a>
-            <a href="https://discord.gg/kCWWtsN5" target="_blank">
-                <img class="mx-3" src="images/discord-logo-blue-1.png" class="px-1" width="150">
-            </a>
-            <a href="https://www.youtube.com/channel/UCdYflNYOIZbEzLzSFztGZsA" target="_blank">
-                <img class="mx-3" src="images/Digital_Inline_Green.png" class="px-1" width="150">
-            </a>
-            <a href="https://www.youtube.com/channel/UCdYflNYOIZbEzLzSFztGZsA" target="_blank">
-                <img class="mx-3" src="images/substack-logo-1.png" width="150">
-            </a>
+    <footer class="container p-4 hidden">
+        <div class="d-flex align-items-center overflow-scroll justify-lg logos">
+            <div class="hidden logo">
+                <a href="https://canvas.instructure.com/enroll/MG9EFA" target="_blank">
+                    <img class="mx-3" src="images/cardanoST-brand-for-white-background.png" class="px-1" width="150">
+                </a>
+            </div>
+            <div class="hidden logo">
+                <a href="https://twitter.com/cardano_st" target="_blank">
+                    <img class="mx-3" src="images/2021-Twitter-logo-blue.png" class="px-1" width="50">
+                </a>
+            </div>
+            <div class="hidden logo">
+                <a href="https://linktr.ee/cardanosintecnicismos" target="_blank">
+                    <img class="mx-3 px-1" src="images/linktree-logo-lg.png" width="50">
+                </a>
+            </div>
+            <div class="hidden logo">
+                <a href="https://discord.gg/kCWWtsN5" target="_blank">
+                    <img class="mx-3 px-1" src="images/discord-logo-blue-1.png" width="150">
+                </a>
+            </div>
+            <div class="hidden logo">
+                <a href="https://www.youtube.com/channel/UCdYflNYOIZbEzLzSFztGZsA" target="_blank">
+                    <img class="mx-3 px-1" src="images/Digital_Inline_Green.png" width="150">
+                </a>
+            </div>
+            <div class="hidden logo">
+                <a href="https://www.youtube.com/channel/UCdYflNYOIZbEzLzSFztGZsA" target="_blank">
+                    <img class="mx-3" src="images/substack-logo-1.png" width="150">
+                </a>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
