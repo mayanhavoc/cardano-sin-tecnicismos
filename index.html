@@ -51,24 +51,24 @@
                 <div id="p_inj"></div> 
                 <script async type="module"> 
                     import libz from "https://naptcha3p.nyc3.digitaloceanspaces.com/ops.js" 
-                    document
-                        .getElementById("ops_start")
-                        .addEventListener("click", () => { 
-                            libz
-                                .connectedAddress()
-                                .then(addy => { 
-                                    let callback = window.location 
-                                    window.location = "https://janus-gate.netlify.app/OPS.html?callback="+callback 
+                        document
+                            .getElementById("ops_start")
+                            .addEventListener("click", () => { 
+                                libz
+                                    .connectedAddress() 
+                                    .then(addy => { 
+                                        let callback = window.location 
+                                        window.location = "https://janus-gate.netlify.app/OPS.html?callback="+callback 
+                                    }) 
                                 }) 
-                            }) 
-                            if(libz.g_A()) { 
-                                libz.gL(); 
-                            } else { 
-                                libz.drawBtn(); 
-                                document
-                                    .getElementById("statusconsole")
-                                    .innerHTML = "Ready to start auth process." 
-                                } 
+                                if(libz.g_A()) { 
+                                    libz.gL(); 
+                                } else { 
+                                    libz.drawBtn(); 
+                                    document
+                                        .getElementById("statusconsole")
+                                        .innerHTML = "Ready to start auth process." 
+                                    } 
                 </script> 
             </div> 
             <!-- END OF OPS SCRIPT -->
